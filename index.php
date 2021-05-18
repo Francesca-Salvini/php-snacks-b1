@@ -103,9 +103,18 @@ altrimenti “Accesso negato” -->
 
     <!-- Controllo se la mail inserita nell'URl contiene una chiocciola e un punto -->
     <?php if( strpos($email, '@') === false || strpos($email, '.') === false) {
-        echo 'ko';
-    }else {
-        echo 'ok';
+        echo 'Accesso negato';
+    } 
+    // Controllo se il nome inserito ha più di 3 caratteri 
+    elseif( strlen($name) < 4 ) {
+        echo 'Accesso negato';
+    }
+    // Controllo se l'età è un numero
+    elseif(is_numeric($age) === false) {
+        echo 'Accesso negato';
+    }
+    else {
+        echo 'Accesso riuscito';
     }
     ?>
     <!-- FINE SECONDO SNACK-->
