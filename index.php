@@ -63,15 +63,15 @@ altrimenti “Accesso negato” -->
 
     //EMAIL
     $email = $_GET['email'];
-    var_dump($email);
+    //var_dump($email);
 
     //NAME
     $name = $_GET['name'];
-    var_dump($name);
+    //var_dump($name);
 
     //AGE
     $age = $_GET['age'];
-    var_dump($age);
+    //var_dump($age);
 
 
 ?>
