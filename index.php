@@ -48,6 +48,34 @@ Olimpia Milano - Cantù | 55-60 -->
 
 ?>
 
+
+
+<!-- Snack 2
+Passare come parametri GET name, mail e age 
+e verificare (cercando i metodi che non conosciamo nella documentazione) 
+che name sia più lungo di 3 caratteri, 
+che mail contenga un punto e una chiocciola e 
+che age sia un numero. 
+Se tutto è ok stampare “Accesso riuscito”, 
+altrimenti “Accesso negato” -->
+
+<?php 
+
+    //EMAIL
+    $email = $_GET['email'];
+    var_dump($email);
+
+    //NAME
+    $name = $_GET['name'];
+    var_dump($name);
+
+    //AGE
+    $age = $_GET['age'];
+    var_dump($age);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +86,7 @@ Olimpia Milano - Cantù | 55-60 -->
 </head>
 <body>
     
+    <!-- PRIMO SNACK -->
     <ul>
         <?php for($i = 0; $i < count($partite); $i++) { ?>
         <?php $this_partita = $partite[$i]; ?>
@@ -67,6 +96,19 @@ Olimpia Milano - Cantù | 55-60 -->
 
         <?php } ?>
     </ul>
+
+    <!-- FINE PRIMO SNACK -->
+
+    <!-- SECONDO SNACK-->
+
+    <!-- Controllo se la mail inserita nell'URl contiene una chiocciola e un punto -->
+    <?php if( strpos($email, '@') === false || strpos($email, '.') === false) {
+        echo 'ko';
+    }else {
+        echo 'ok';
+    }
+    ?>
+    <!-- FINE SECONDO SNACK-->
     
 </body>
 </html>
